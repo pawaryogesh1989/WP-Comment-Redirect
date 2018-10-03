@@ -2,8 +2,8 @@
 Contributors: pawaryogesh1989, clarionwpdeveloper
 Tags: Redirect After Comment To Custom Page, wp comment, comment redirect, redirect after comment, comment redirect to page, custom page redirect, post comment redirect, wp external redirect, page comment redirect, custom comment redirect
 Requires at least: 3.0.1
-Tested up to: 4.4.2
-Stable tag: 4.4
+Tested up to: 4.9.8
+Stable tag: 4.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
