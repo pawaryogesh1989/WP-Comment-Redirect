@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @package Redirect After Comment To Custom Page
  */
@@ -7,7 +6,7 @@
   Plugin Name: Redirect After Comment To Custom Page
   Plugin URI: http://clariontechnologies.co.in
   Description: Redirect After Comment To Custom Page
-  Version: 1.0.0
+  Version: 2.0.0
   Author: Yogesh Pawar, Clarion Technologies
   Author URI: http://clariontechnologies.co.in
   License: GPLv2 or later
@@ -23,4 +22,5 @@ if (!class_exists('WP_Comment_Redirect')) {
 
 //Initialising Class Plugin
 new WP_Comment_Redirect();
+
 ?>

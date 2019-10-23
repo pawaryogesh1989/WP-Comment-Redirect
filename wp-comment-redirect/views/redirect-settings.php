@@ -1,5 +1,5 @@
 <div class="wrap">
-    <h3><?php _e('Comment Redirect Settings');?></h3>
+    <h3><?php _e('Comment Redirect Settings'); ?></h3>
 
     <form method="post" action="options.php">
         <?php settings_fields('wp-comment-redirect-settings-group'); ?>

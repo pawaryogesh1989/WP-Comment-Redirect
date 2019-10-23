@@ -1,19 +1,33 @@
 <?php
 
-class WP_Comment_Redirect {
+//Main Class File
+class WP_Comment_Redirect
+{
 
-    public function __construct() {
+    /**
+     * Constructor of the class
+     */
+    function __construct()
+    {
 
-        add_action('admin_menu', array($this, 'wp_comment_redirect_menu'));
-        add_action('admin_init', array($this, 'wp_comment_redirect_settings'));
+        add_action('admin_menu', array($this, 'wpCommentRedirectMenu'));
+        add_action('admin_init', array($this, 'wpRedirectSettings'));
         add_filter('comment_post_redirect', array($this, 'wp_comment_redirect_url'));
     }
 
-    public function wp_comment_redirect_menu() {
-        add_plugins_page('Comment Redirect Settings', 'Comment Redirect Settings', 'manage_options', 'comment-redirect-settings', array($this, 'load_redirect_settings_page'), '', 85);
+    /**
+     * Function to add menu in backend
+     */
+    public function wpCommentRedirectMenu()
+    {
+        add_plugins_page('Comment Redirect Settings', 'Comment Redirect Settings', 'manage_options', 'comment-redirect-settings', array($this, 'loadRedirectSettingsPage'), '', 85);
     }
 
-    public function load_redirect_settings_page() {
+    /**
+     * Function to load the settings Page
+     */
+    public function loadRedirectSettingsPage()
+    {
         if (file_exists(plugin_dir_path(__DIR__) . '/views/redirect-settings.php')) {
             require plugin_dir_path(__DIR__) . '/views/redirect-settings.php';
         } else {
@@ -21,16 +35,26 @@ class WP_Comment_Redirect {
         }
     }
 
-    public function wp_comment_redirect_settings() {
+    /**
+     * Function to register settings group to save redirect URL
+     */
+    public function wpRedirectSettings()
+    {
 
         register_setting('wp-comment-redirect-settings-group', 'wp_comment_redirect_url');
     }
 
-    public function wp_comment_redirect_url($location) {
+    /**
+     * Function to redirect user to custom URL
+     * @param type $location
+     * @return type
+     */
+    public function wp_comment_redirect_url($location)
+    {
 
         $redirect_custom_url = get_option('wp_comment_redirect_url');
         return $redirect_custom_url;
     }
-
 }
+
 ?>
