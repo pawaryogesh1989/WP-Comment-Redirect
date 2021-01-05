@@ -1,9 +1,10 @@
 === Redirect After Comment To Custom Page ===
 Contributors: pawaryogesh1989, clarionwpdeveloper
 Tags: Redirect After Comment To Custom Page, wp comment, comment redirect, redirect after comment, comment redirect to page, custom page redirect, post comment redirect, wp external redirect, page comment redirect, custom comment redirect
-Requires at least: 4.6
-Tested up to: 5.2.4
+Requires at least: 5.0 or higher
+Tested up to: 5.6
 Stable tag: 5.0
+PHP Version: 5.6 or higher
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +26,10 @@ This plugin can be used to redirect to custom page after commenting. The redirec
 1. screenshot-1 - Plugin Settings and Options.
 
 == Changelog ==
+
+= 3.0.0 =
+* Now works for nested (inner level) comments also.
+* Compatibility changes to make it work with latest WordPress version.
 
 = 2.0.0 =
 * Now works for nested (inner level) comments also.
